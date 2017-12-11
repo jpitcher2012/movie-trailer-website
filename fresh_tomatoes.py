@@ -18,7 +18,7 @@ main_page_head = '''
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            background-color: black;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -38,10 +38,14 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            color: #bbbbbb;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #111;
             cursor: pointer;
+        }
+        .movie-tile h2{
+            font-size: 14pt;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -54,7 +58,42 @@ main_page_head = '''
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: black;
+        }
+        @font-face {
+            font-family: "Disney";
+            src: url('http://static.tumblr.com/npggxjg/VdAlzs1dx/disney.otf');
+        }
+        #header {
+            width: 625px;
+            margin: auto;
+            background-image: url('https://www2.baylor.edu/wp-content/uploads/2016/05/enchanted-storybook-castle-4-BP.png');
+            background-size: 625px auto;
+            background-position: top right;
+            background-repeat: no-repeat;
+            margin-bottom: 50px;
+            transform: scaleX(-1);
+        }
+        #header-text {
+            text-shadow:
+                -2px -2px 0 black,
+                2px -2px 0 black,
+                -2px 2px 0 black,
+                2px 2px 0 black;
+            width: 250px;
+            margin-right: 0;
+            margin-left: auto;
+            text-align: center;
+            transform: scaleX(-1); 
+        }
+        #header-disney {
+            font-family: "Disney", sans-serif;
+            font-size: 54pt;
+            color: #bbbbbb;
+        }
+        #header-honest-trailers {
+            font-weight: 800;
+            color: white;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -104,11 +143,16 @@ main_page_content = '''
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Disney Honest Trailers 2</a>
-          </div>
+      <div id="header">
+        <div id="header-text">
+          <a href="#">
+            <div id="header-disney">Disney</div>
+            <div id="header-honest-trailers">
+              <span style="font-size:30pt">HONEST</span>
+              <br/>
+              <span style="font-size:22pt">TRAILERS</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -122,8 +166,8 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+    <img src="{poster_image_url}" width="160" height="240">
     <h2>{movie_title}</h2>
 </div>
 '''

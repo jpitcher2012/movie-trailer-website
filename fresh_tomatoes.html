@@ -12,7 +12,7 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <style type="text/css" media="screen">
         body {
-            padding-top: 80px;
+            background-color: black;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -32,10 +32,14 @@
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            color: #bbbbbb;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #111;
             cursor: pointer;
+        }
+        .movie-tile h2{
+            font-size: 14pt;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -48,7 +52,42 @@
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: black;
+        }
+        @font-face {
+            font-family: "Disney";
+            src: url('http://static.tumblr.com/npggxjg/VdAlzs1dx/disney.otf');
+        }
+        #header {
+            width: 625px;
+            margin: auto;
+            background-image: url('https://www2.baylor.edu/wp-content/uploads/2016/05/enchanted-storybook-castle-4-BP.png');
+            background-size: 625px auto;
+            background-position: top right;
+            background-repeat: no-repeat;
+            margin-bottom: 50px;
+            transform: scaleX(-1);
+        }
+        #header-text {
+            text-shadow:
+                -2px -2px 0 black,
+                2px -2px 0 black,
+                -2px 2px 0 black,
+                2px 2px 0 black;
+            width: 250px;
+            margin-right: 0;
+            margin-left: auto;
+            text-align: center;
+            transform: scaleX(-1); 
+        }
+        #header-disney {
+            font-family: "Disney", sans-serif;
+            font-size: 54pt;
+            color: #bbbbbb;
+        }
+        #header-honest-trailers {
+            font-weight: 800;
+            color: white;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -94,43 +133,48 @@
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Disney Honest Trailers</a>
-          </div>
+      <div id="header">
+        <div id="header-text">
+          <a href="#">
+            <div id="header-disney">Disney</div>
+            <div id="header-honest-trailers">
+              <span style="font-size:30pt">HONEST</span>
+              <br/>
+              <span style="font-size:22pt">TRAILERS</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
     <div class="container">
       
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RmFbmlwWa0k" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51RC8ZR6KBL.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="RmFbmlwWa0k" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51RC8ZR6KBL.jpg" width="160" height="240">
     <h2>Toy Story</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KFu_26DrLE4" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51XNP3ARK3L.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="KFu_26DrLE4" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51XNP3ARK3L.jpg" width="160" height="240">
     <h2>Finding Nemo</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="y2truxhcBko" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/51g%2B1-GJCuL.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="y2truxhcBko" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51g%2B1-GJCuL.jpg" width="160" height="240">
     <h2>Inside Out</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="OzMJkRwOxjs" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/61m64J4evuL._SY717_.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="OzMJkRwOxjs" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61m64J4evuL._SY717_.jpg" width="160" height="240">
     <h2>Wreck It Ralph</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ihCciBFdbkw" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/510nVoCaWtL.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="ihCciBFdbkw" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/510nVoCaWtL.jpg" width="160" height="240">
     <h2>Big Hero 6</h2>
 </div>
 
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="JOIjmLw0iQc" data-toggle="modal" data-target="#trailer">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71-Fj-WsM7L._SY717_.jpg" width="220" height="342">
+<div class="col-md-4 col-lg-2 movie-tile text-center" data-trailer-youtube-id="JOIjmLw0iQc" data-toggle="modal" data-target="#trailer">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/71-Fj-WsM7L._SY717_.jpg" width="160" height="240">
     <h2>Zootopia</h2>
 </div>
 
